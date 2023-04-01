@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/11651442/remove-array-elements-and-add-them-back-to-where-they-were
+ans of chatgpt- https://chat.openai.com/chat/dcbfd3ef-cb31-41cd-b4e3-df99e1e7a1ca
