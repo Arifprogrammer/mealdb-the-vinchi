@@ -11,12 +11,10 @@ const Maintag = () => {
   //!functions
   const getProductId = (product) => {
     addToLocalStorage(product.idMeal);
-    let newCart = [];
     const matchedCart = carts.find((pd) => pd.idMeal === product.idMeal);
     if (!matchedCart) {
       product.quantity = 1;
-      newCart.push(product);
-      setCart([...carts, ...newCart]);
+      setCart([...carts, product]);
     } else {
       matchedCart.quantity += 1;
       const deductExistingCart = carts.filter(
@@ -24,7 +22,6 @@ const Maintag = () => {
       );
       const sortCart = [...deductExistingCart, matchedCart];
       sortCart.sort((a, b) => b.quantity - a.quantity);
-      // setCart([...deductExistingCart, matchedCart]);
       setCart(sortCart);
     }
   };
@@ -41,11 +38,22 @@ const Maintag = () => {
     loadData();
   }, []);
   useEffect(() => {
-    // console.log(carts);
-  }, [carts]);
+    const getDataFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
+    let newCart = [];
+    for (const idMeal in getDataFromLocalStorage) {
+      if (products.length > 0) {
+        const matchedProduct = products.find((pd) => pd.idMeal === idMeal);
+        const storedQuanitity = getDataFromLocalStorage[idMeal];
+        matchedProduct.quantity = storedQuanitity;
+        newCart.push(matchedProduct);
+        // setCart([...carts, matchedProduct]);   //! won't work properly because setCart function is an asynchronous process.
+      }
+    }
+    setCart(newCart);
+  }, [products]);
   return (
     <div>
-      <main className="grid grid-cols-[4fr_1fr] py-12">
+      <main className="grid grid-cols-[3fr_1fr] py-12">
         <div className="card-conatiner flex justify-center gap-8 flex-wrap">
           {products.map((product) => (
             <Card

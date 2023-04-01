@@ -10,13 +10,21 @@ const Cart = ({ carts }) => {
     .reduce((p, c) => p + c, 0);
 
   return (
-    <div className="p-6 text-xl font-semibold space-y-4 bg-slate-50 sticky top-0">
+    <div className="p-6 text-xl font-semibold space-y-4 bg-slate-50 sticky top-0 rounded-xl mr-4">
       <h1 className="text-center">Cart</h1>
       <h1 className="">Selected Items: {selectedItems}</h1>
-      <ol className="list-disc ps-3">
+      <ol className="ps-3 space-y-2">
         {carts.map((cart) => (
-          <li>
-            {cart.strMeal} <span>{cart.quantity}</span>
+          <li className="flex gap-2 items-center" key={cart.idMeal}>
+            <img
+              src={cart.strMealThumb}
+              alt=""
+              className="w-10 h-10 rounded-full border-2 border-[#7ff485]"
+            />
+            <span>
+              {cart.strMeal} {cart.quantity}
+            </span>
+            <br />
           </li>
         ))}
       </ol>
