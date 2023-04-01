@@ -53,7 +53,7 @@ const Maintag = () => {
   }, [products]);
   return (
     <div>
-      <main className="grid grid-cols-[3fr_1fr] py-12">
+      <main className="lg:grid lg:grid-cols-[3fr_1fr] py-6 md:py-12 space-y-8 lg:space-y-0">
         <div className="card-conatiner flex justify-center gap-8 flex-wrap">
           {products.map((product) => (
             <Card
@@ -63,7 +63,7 @@ const Maintag = () => {
             ></Card>
           ))}
         </div>
-        <div className="cart-container">
+        <div className="cart-container ml-4 lg-ml-0">
           <Cart carts={carts}></Cart>
         </div>
       </main>

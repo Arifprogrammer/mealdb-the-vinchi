@@ -3,7 +3,7 @@ import logo from "../../../public/mealdb-removebg-preview.png";
 const Header = () => {
   return (
     <div>
-      <div className="navbar bg-transparent w-3/4 mx-auto">
+      <div className="navbar bg-transparent md:w-3/4 md:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,10 +54,13 @@ const Header = () => {
               <li>
                 <a>About us</a>
               </li>
+              <li className="rounded-lg bg-[#7ff485] mx-auto mt-4">
+                <a className="">Login/Signup</a>
+              </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">
-            <img src={logo} alt="" className="w-3/6" />
+          <a className="normal-case md:text-xl">
+            <img src={logo} alt="" className="md:w-3/6 " />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -92,8 +95,8 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn btn-accent py-0 px-6">Login/Signup</a>
+        <div className="navbar-end hidden md:grid">
+          <a className="btn btn-accent">Login/Signup</a>
         </div>
       </div>
     </div>
