@@ -49,6 +49,7 @@ const Maintag = () => {
         // setCart([...carts, matchedProduct]);   //! won't work properly because setCart function is an asynchronous process.
       }
     }
+    newCart.sort((a, b) => b.quantity - a.quantity);
     setCart(newCart);
   }, [products]);
   return (
