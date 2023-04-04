@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../../public/mealdb-removebg-preview.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import "./Header.css";
 const Header = () => {
   return (
     <div>
@@ -66,10 +67,15 @@ const Header = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 items-center">
-            <Link to={"/"}>
-              <a>Home</a>
-            </Link>
-            <li tabIndex={0} className="mx-4 z-10">
+            <NavLink
+              to={"/"}
+              className={({ isActive, isPending }) =>
+                isActive ? "active" : isPending ? "pending" : ""
+              }
+            >
+              <a className="px-4 py-3 rounded-lg">Home</a>
+            </NavLink>
+            <li tabIndex={0} className="z-10">
               <a>
                 Category
                 <svg
@@ -91,9 +97,14 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <Link to={"/about"}>
-              <a>About us</a>
-            </Link>
+            <NavLink
+              to={"/about"}
+              className={({ isActive, isPending }) =>
+                isActive ? "active" : isPending ? "pending" : ""
+              }
+            >
+              <a className="px-4 py-3 rounded-lg">About us</a>
+            </NavLink>
           </ul>
         </div>
         <div className="navbar-end hidden md:grid">

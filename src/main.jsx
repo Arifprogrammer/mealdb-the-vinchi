@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Maintag from "./Components/Maintag/Maintag";
+import SingleMealDetails from "./Components/SingleMealDetails/SingleMealDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,10 +25,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: (
-          <div className="my-12 text-2xl text-center text-red-600">
+          <div className="py-12 font-semibold text-2xl text-center text-red-600">
             This section is under maintanence. Please try again later.
           </div>
         ),
+      },
+      {
+        path: "/meal/:mealid",
+        element: <SingleMealDetails />,
       },
     ],
   },
