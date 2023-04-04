@@ -10,6 +10,9 @@ const Card = ({ product, getProductId }) => {
         <div className="card-body items-center text-center">
           <h2 className="card-title">{product.strMeal}</h2>
           <p>Price: ${product.idMeal.slice(0, 2)}</p>
+          <button className="px-11 py-2 bg-slate-500 text-white rounded-lg">
+            Details
+          </button>
           <span className="card-actions" onClick={() => getProductId(product)}>
             <button className="btn btn-accent py-0 px-6">Add to Cart</button>
           </span>

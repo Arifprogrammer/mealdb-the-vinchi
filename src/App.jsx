@@ -5,8 +5,8 @@ import Maintag from "./Components/Maintag/Maintag";
 function App() {
   return (
     <>
-      <Header></Header>
-      <Maintag></Maintag>
+      {/* <Header></Header>
+      <Maintag></Maintag> */}
     </>
   );
 }

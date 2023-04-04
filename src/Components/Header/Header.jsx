@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../../public/mealdb-removebg-preview.png";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -26,10 +27,10 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              <Link to={"/"} className="pl-4">
                 <a>Home</a>
-              </li>
-              <li tabIndex={0}>
+              </Link>
+              <li tabIndex={0} className="mx-4">
                 <a className="justify-between">
                   Category
                   <svg
@@ -51,9 +52,9 @@ const Header = () => {
                   </li>
                 </ul>
               </li>
-              <li>
+              <Link to={"/about"} className="pl-4">
                 <a>About us</a>
-              </li>
+              </Link>
               <li className="rounded-lg bg-[#7ff485] mx-auto mt-4">
                 <a className="">Login/Signup</a>
               </li>
@@ -64,11 +65,11 @@ const Header = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
+          <ul className="menu menu-horizontal px-1 items-center">
+            <Link to={"/"}>
               <a>Home</a>
-            </li>
-            <li tabIndex={0}>
+            </Link>
+            <li tabIndex={0} className="mx-4 z-10">
               <a>
                 Category
                 <svg
@@ -82,17 +83,17 @@ const Header = () => {
                 </svg>
               </a>
               <ul className="p-2">
-                <li>
+                <li className="bg-slate-100">
                   <a>Vegetarian</a>
                 </li>
-                <li>
+                <li className="bg-slate-100">
                   <a>Non-Vegetarian</a>
                 </li>
               </ul>
             </li>
-            <li>
+            <Link to={"/about"}>
               <a>About us</a>
-            </li>
+            </Link>
           </ul>
         </div>
         <div className="navbar-end hidden md:grid">

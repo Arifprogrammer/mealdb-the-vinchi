@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import Cart from "../Cart/Cart";
 import addToLocalStorage from "../../../resources/fakedb";
+import { useLoaderData } from "react-router-dom";
 
 const Maintag = () => {
   //! states
@@ -9,6 +10,9 @@ const Maintag = () => {
   const [carts, setCart] = useState([]);
 
   //!functions
+  /* const { meals } = useLoaderData();
+  console.log(meals);
+  setProducts(data.meals); */
   const getProductId = (product) => {
     addToLocalStorage(product.idMeal);
     const matchedCart = carts.find((pd) => pd.idMeal === product.idMeal);

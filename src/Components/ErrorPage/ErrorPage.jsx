@@ -10,11 +10,11 @@ export default function ErrorPage() {
       className="min-h-screen flex justify-center items-center "
     >
       <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Oops!</h1>
+        <h1 className="text-4xl font-bold text-red-500">Oops!</h1>
         <p className="text-2xl font-semibold">
           Sorry, an unexpected error has occurred.
         </p>
-        <p className="text-2xl font-semibold">
+        <p className="text-2xl font-semibold text-red-700">
           <i>{error.statusText || error.message}!!!!</i>
         </p>
       </div>
