@@ -29,10 +29,10 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <Link to={"/"} className="pl-4">
-                <a>Home</a>
+                <p>Home</p>
               </Link>
               <li tabIndex={0} className="mx-4">
-                <a className="justify-between">
+                <p className="justify-between">
                   Category
                   <svg
                     className="fill-current"
@@ -43,27 +43,27 @@ const Header = () => {
                   >
                     <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                   </svg>
-                </a>
+                </p>
                 <ul className="p-2">
                   <li>
-                    <a>Vegetarian</a>
+                    <p>Vegetarian</p>
                   </li>
                   <li>
-                    <a>Non-Vegetarian</a>
+                    <p>Non-Vegetarian</p>
                   </li>
                 </ul>
               </li>
               <Link to={"/about"} className="pl-4">
-                <a>About us</a>
+                <p>About us</p>
               </Link>
               <li className="rounded-lg bg-[#7ff485] mx-auto mt-4">
-                <a className="">Login/Signup</a>
+                <p className="">Login/Signup</p>
               </li>
             </ul>
           </div>
-          <a className="normal-case md:text-xl">
+          <p className="normal-case md:text-xl">
             <img src={logo} alt="" className="md:w-3/6 " />
-          </a>
+          </p>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 items-center">
@@ -73,10 +73,10 @@ const Header = () => {
                 isActive ? "active" : isPending ? "pending" : ""
               }
             >
-              <a className="px-4 py-3 rounded-lg">Home</a>
+              <p className="px-6 py-1 rounded-lg">Home</p>
             </NavLink>
             <li tabIndex={0} className="z-10">
-              <a>
+              <p>
                 Category
                 <svg
                   className="fill-current"
@@ -87,13 +87,13 @@ const Header = () => {
                 >
                   <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-              </a>
+              </p>
               <ul className="p-2">
                 <li className="bg-slate-100">
-                  <a>Vegetarian</a>
+                  <p>Vegetarian</p>
                 </li>
                 <li className="bg-slate-100">
-                  <a>Non-Vegetarian</a>
+                  <p>Non-Vegetarian</p>
                 </li>
               </ul>
             </li>
@@ -103,12 +103,12 @@ const Header = () => {
                 isActive ? "active" : isPending ? "pending" : ""
               }
             >
-              <a className="px-4 py-3 rounded-lg">About us</a>
+              <p className="px-6 py-1 rounded-lg">About us</p>
             </NavLink>
           </ul>
         </div>
         <div className="navbar-end hidden md:grid">
-          <a className="btn btn-accent">Login/Signup</a>
+          <p className="btn btn-accent">Login/Signup</p>
         </div>
       </div>
     </div>

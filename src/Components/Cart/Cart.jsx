@@ -10,7 +10,7 @@ const Cart = ({ carts }) => {
     .reduce((p, c) => p + c, 0);
 
   return (
-    <div className="p-6 text-xl font-semibold space-y-4 bg-slate-50 sticky top-0 rounded-xl mr-4">
+    <div className="p-6 text-xl font-semibold space-y-4 bg-slate-50 sticky top-5 rounded-xl mr-4">
       <h1 className="text-center">Cart</h1>
       <h1 className="">Selected Items: {selectedItems}</h1>
       <ol className="ps-3 space-y-2">

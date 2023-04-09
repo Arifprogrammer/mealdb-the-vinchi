@@ -12,7 +12,7 @@ const Maintag = () => {
   //!functions
   /* const { meals } = useLoaderData();
   console.log(meals);
-  setProducts(data.meals); */
+  setProducts(data.meals); */ //! এইখানে set করলে error দিবে তাই useEffect এর ভিতর set করতে হবে।
   const getProductId = (product) => {
     addToLocalStorage(product.idMeal);
     const matchedCart = carts.find((pd) => pd.idMeal === product.idMeal);
